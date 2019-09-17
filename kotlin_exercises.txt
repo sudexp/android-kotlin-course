@@ -1,0 +1,92 @@
+/*
+ * Exercise 01 : Basic Types and Control Flow
+ * Create a for loop which loops through numbers from 1 to 10
+ * and your program only displays a even numbers.
+*/
+
+fun main() {
+    for (number in 1..10) {
+        if (number % 2 == 0) println(number)
+    }
+}
+
+/*
+ * Exercise 02 : Functions
+ * Create a function which calculates and returns a two numbers sum
+ * (numbers are taken into function with parameters). Define two numbers 
+ * with uses val types and call your created function and display a sum.
+*/
+
+fun sum(a: Int, b: Int): Int {
+    return a + b
+}
+
+fun main() {
+    print("sun of 1 and 2 is ")
+    println(sum(1, 2))
+}
+
+/*
+ * Exercise 03 : Loop and arrays
+ * Define an array with fruits (only String type, like fruit name).
+ * Use for loop and display fruit names.
+*/
+
+val fruits = arrayOf<String>("apple","orange","lime")
+
+fun main() {
+    for (fruit in fruits) {
+        println(fruit)
+    }
+}
+
+/*
+ * Exercise 04 : Classes, Collections and loops
+ * Define a Fruit class with fruit properties name and color.
+ * Add a few fruits to MutableList (can add or remove elements).
+ * Use for loop and display fruit names and colors.
+ */
+
+class Fruit(val name: String, val color: String) {
+}
+
+val apple = Fruit("apple", "red")
+val orange = Fruit("orange", "orange")
+val lime = Fruit("lime", "green")
+
+val fruits = mutableListOf<Fruit>(apple, orange, lime)
+
+fun main() {
+    for (fruit in fruits) {
+    	println(fruit.name + " is " + fruit.color)
+	}
+}
+
+/*
+ * Exercise 05 : Classes, properties and nullable values
+ * Define a Person class with following rules. Name and email (can't be null)
+ * and phone (can be null). Create displayData function in Person class,
+ * which displays persons data. If person doesn't have a phone (is a null),
+ * display text "no phone" (after name and email). Create a two persons:
+ * first person has all data and second person doesn't have a phone
+ * (phone is null). Print both persons data to screen.
+*/
+
+fun main() {
+    
+    class Person(val name: String, val email: String, val phone: String?) {
+        fun displayData() {
+            if (phone is String) {
+            	println("${name} ${email} ${phone}")
+        	} else {
+                println("${name} ${email} no phone")
+            }
+		}
+	}
+    
+    val person1 = Person("Pekka", "pekka@domain.com", "020-123456")
+    val person2 = Person("Minna", "minna@domain.com", null)
+
+    person1.displayData()
+    person2.displayData()
+}
