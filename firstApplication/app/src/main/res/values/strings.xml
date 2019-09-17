@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">First Application</string>
+    <string name="button_text">Click me!</string>
+    <string name="hello_text">Hello World!</string>
+    <string name="clicked_text">Button is clicked!</string>
+    <string name="portrait_txt">Portrait orientation</string>
+    <string name="landscape_txt">Landscape orientation</string>
+</resources>

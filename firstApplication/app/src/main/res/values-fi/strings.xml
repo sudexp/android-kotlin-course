@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Eka sovellus</string>
+    <string name="button_text">Napauta minua!</string>
+    <string name="hello_text">Terve maailma!</string>
+    <string name="clicked_text">Painiketta on painettu!</string>
+    <string name="portrait_txt">Muotokuva suunta</string>
+    <string name="landscape_txt">Vaakasuunta</string>
+</resources>
