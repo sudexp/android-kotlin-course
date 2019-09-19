@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Sum Calculator</string>
+    <string name="button_txt">Calculate sum!</string>
+    <string name="portrait_txt">Portrait orientation</string>
+    <string name="landscape_txt">Landscape orientation</string>
+    <string name="number1_text">Enter a number:</string>
+    <string name="number2_text">Enter a number:</string>
+    <string name="number1_hint">First number</string>
+    <string name="number2_hint">Second number</string>
+    <string name="button_text">Calculate sum!</string>
+    <string name="result_text">Result:</string>
+    <string name="result_field" />
+</resources>
