@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">IntentTestApp</string>
+    <string name="name_hint_text">Type your name here</string>
+    <string name="button_text">Start another activity</string>
+    <string name="hello_text">Hello %1$s!</string>
+    <string name="back_button_text">Go Back</string>
+    <string name="another_button_text">Start another activity for result</string>
+    <string name="another_back_button_text">Go Back with result</string>
+</resources>
