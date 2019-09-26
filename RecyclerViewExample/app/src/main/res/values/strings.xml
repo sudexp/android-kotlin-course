@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RecyclerViewExample</string>
+    <string name="editText">Type text here...</string>
+    <string name="button_text1">Add</string>
+    <string name="button_text2">Clear</string>
+    <string name="text">Type here...</string>
+</resources>
