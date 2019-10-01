@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">EmployeesApp</string>
+    <string name="nameTextView">name</string>
+    <string name="titleTextView">title</string>
+    <string name="emailTextView">email</string>
+    <string name="phoneTextView">phone</string>
+    <string name="departmentTextView">department</string>
+    <string name="employee_image">image</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis leo a nulla feugiat, nec ultrices dui sodales. Suspendisse rhoncus sapien eget nisl finibus, quis ullamcorper dolor ultrices. Morbi lorem dui, tincidunt a quam at, mattis tristique dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc et felis ut elit vestibulum fermentum in eget urna. Ut at rutrum erat, a tristique tortor. Etiam venenatis facilisis venenatis. In pharetra molestie metus eu imperdiet. Duis sem felis, semper sit amet arcu sit amet, malesuada interdum dui. Ut ullamcorper, leo nec elementum convallis, urna elit tincidunt sem, a sodales ex velit et nulla. Cras dui nulla, consequat eu magna in, placerat blandit leo. Donec pretium laoreet condimentum.</string>
+</resources>
