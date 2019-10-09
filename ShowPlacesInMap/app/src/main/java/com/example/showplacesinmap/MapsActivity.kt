@@ -53,7 +53,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 var austria = LatLng(0.0,0.0)
                 for (i in 0..(countries.length()-1)) {
                     val country = countries.getJSONObject(i)
-                    // Add a marker in Sydney and move the camera
                     val marker = LatLng(country.getString("lat").toDouble(), country.getString("long").toDouble())
                     val countryTitle = country.getString("country")
                     mMap.addMarker(MarkerOptions().position(marker).title(countryTitle))
