@@ -2,6 +2,12 @@ package com.example.showplacesinmap
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.JsonObjectRequest
+import com.android.volley.toolbox.Volley
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -35,9 +41,35 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
-        // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
-        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        // Instantiate the RequestQueue
+        val queue = Volley.newRequestQueue(this)
+        // URL to JSON data
+        val url = "https://student.labranet.jamk.fi/~M0394/countries.json"
+        // A request for retrieving a JSONObject response body at a given URL
+        val jsonObjectRequest = JsonObjectRequest(
+            Request.Method.GET, url, null,
+            Response.Listener { response ->
+                val countries = response.getJSONArray("countries")
+                var austria = LatLng(0.0,0.0)
+                for (i in 0..(countries.length()-1)) {
+                    val country = countries.getJSONObject(i)
+                    // Add a marker in Sydney and move the camera
+                    val marker = LatLng(country.getString("lat").toDouble(), country.getString("long").toDouble())
+                    val countryTitle = country.getString("country")
+                    mMap.addMarker(MarkerOptions().position(marker).title(countryTitle))
+                    if (countryTitle == "at") austria = marker
+                }
+                mMap.uiSettings.isZoomControlsEnabled = true
+                // mMap.uiSettings.isCompassEnabled = true
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(austria, 4.0F))
+            },
+            Response.ErrorListener { error ->
+                Toast.makeText(this, error.toString(), Toast.LENGTH_LONG).show()
+            }
+
+        )
+
+        // Add the request to the RequestQueue.
+        queue.add(jsonObjectRequest)
     }
 }
