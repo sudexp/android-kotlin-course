@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">RoomShoppingList</string>
     <string name="action_settings">Settings</string>
+    <string name="nameTextView">item_name</string>
+    <string name="countTextView">item_count</string>
+    <string name="priceTextView">item_price</string>
+    <string name="nameEditText">Name</string>
+    <string name="countEditText">Count</string>
+    <string name="priceEditText">Price</string>
+    <string name="dialog_title">dialog_title</string>
+    <string name="dialog_message">dialog_message</string>
+    <string name="dialog_ok">dialog_ok</string>
+    <string name="dialog_cancel">dialog_cancel</string>
+    <string name="name">Name</string>
+    <string name="count">Count</string>
+    <string name="price">Price</string>
 </resources>
