@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WeatherWidget</string>
+    <string name="city_text">City</string>
+    <string name="temp_text">Temperature</string>
+    <string name="cond_text">Condition</string>
+    <string name="icon_text">Weather Icon</string>
+    <string name="widget_app">Widget App</string>
+    <string name="date_time">Date and Time</string>
+    <string name="update_button">Update</string>
+</resources>
