@@ -6,6 +6,8 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -23,6 +25,10 @@ class MainActivity : AppCompatActivity() {
 
         // Use GolfCourseWishlistAdapter as a adapter for recyclerView
         recyclerView.adapter = GolfCourseWishlistAdapter(Places.placeList())
+
+        // ads
+        MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713")
+        adView.loadAd(AdRequest.Builder().build())
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
